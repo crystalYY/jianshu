@@ -1,0 +1,1 @@
+export const GET_ARTICLE = 'home/GET_ARTICLE';
