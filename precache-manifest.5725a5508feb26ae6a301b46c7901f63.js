@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a02e7e054e7f09f3d4d0ae34c85741e",
+    "revision": "5bdf53f7f87a9d60df577160db1e38fb",
     "url": "/jianshu/index.html"
   },
   {
-    "revision": "b84dd58b21ae94f6d111",
+    "revision": "20091de87f6034528139",
     "url": "/jianshu/static/css/main.65bacd9a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jianshu/static/js/3.1c8eccab.chunk.js"
   },
   {
-    "revision": "b84dd58b21ae94f6d111",
-    "url": "/jianshu/static/js/main.23b8aba7.chunk.js"
+    "revision": "20091de87f6034528139",
+    "url": "/jianshu/static/js/main.bf635585.chunk.js"
   },
   {
     "revision": "6743d7d6491eac68d792",
