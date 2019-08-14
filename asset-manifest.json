@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/jianshu/static/css/main.65bacd9a.chunk.css",
+    "main.js": "/jianshu/static/js/main.23b8aba7.chunk.js",
+    "main.js.map": "/jianshu/static/js/main.23b8aba7.chunk.js.map",
+    "runtime~main.js": "/jianshu/static/js/runtime~main.2c28f459.js",
+    "runtime~main.js.map": "/jianshu/static/js/runtime~main.2c28f459.js.map",
+    "static/js/2.02455799.chunk.js": "/jianshu/static/js/2.02455799.chunk.js",
+    "static/js/2.02455799.chunk.js.map": "/jianshu/static/js/2.02455799.chunk.js.map",
+    "static/js/3.1c8eccab.chunk.js": "/jianshu/static/js/3.1c8eccab.chunk.js",
+    "static/js/3.1c8eccab.chunk.js.map": "/jianshu/static/js/3.1c8eccab.chunk.js.map",
+    "index.html": "/jianshu/index.html",
+    "precache-manifest.d5905d16f6aecdb4939d430aaf11f410.js": "/jianshu/precache-manifest.d5905d16f6aecdb4939d430aaf11f410.js",
+    "service-worker.js": "/jianshu/service-worker.js",
+    "static/css/main.65bacd9a.chunk.css.map": "/jianshu/static/css/main.65bacd9a.chunk.css.map",
+    "static/media/Icon.css": "/jianshu/static/media/iconfont.ccd2dd82.eot"
+  }
+}
