@@ -7,10 +7,12 @@ class Writer extends PureComponent {
 	
 	render() {
 		const {
+			isfocused,
 			writerList,
 			writerLength,
 			currentWriter,
-			changeWriterList
+			changeWriterList,
+			handleFocus
 		} = this.props;
 		return (
 			<WriterWrapper>
@@ -46,7 +48,7 @@ const mapStateToProps = (state) => {
 	return {
 		writerList: state.get('home').get('writerItem'),
 		writerLength: state.get('home').get('writerItemLength'),
-		currentWriter: state.get('home').get('writerItemPosition')
+		currentWriter: state.get('home').get('writerItemPosition'),
 	}
 }
 const mapDispatchToProps = (dispatch) => {

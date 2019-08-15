@@ -37,11 +37,13 @@ const defaultState = fromJS({
 			id:1,
 			picUrl: "./images/writer1.webp",
 			writerName: "北美之美",
-			writerDetail: "写了439.8k字 · 29.1k喜欢"
+			writerDetail: "写了439.8k字 · 29.1k喜欢",
+			focusd: false
 		}
 	],
 	writerItemLength:1,
-	writerItemPosition:1
+	writerItemPosition:1,
+	
 });
 export default (state = defaultState, action) => {
 	switch(action.type) {
