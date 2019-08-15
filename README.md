@@ -79,7 +79,6 @@ jsx语法更简洁易懂，createElement更接近底层
 ### **redux**
 
 #### 基本思想
-![7ad9f68f305a49901f5fa6eb5a289570.png](en-resource://database/602:1)
 所有组件把数据统一存储在Store中，一个组件修改了Store中的数据后，其他组件可以感知到，当感知到数据的修改后就会自动去Store中取数据更新自己组件的内容
 store中的数据只能store自己通过reducer返回的newState更新，别的组件都无法更新。并且一个项目中只有一个store
 
