@@ -1,8 +1,5 @@
-# 简书项目总结
 
-标签（空格分隔）： 项目总结
 
----
 ## 技术栈：
 react + react-redux + styled-components + axios + redux-thunk + react-router-dom + immutable
 
@@ -15,7 +12,7 @@ react + react-redux + styled-components + axios + redux-thunk + react-router-dom
      3. npm start
      4. 项目将运行在 http://localhost:3000/
 
-
+---
 
 ## 项目整体架构
 ### **已完成部分**
