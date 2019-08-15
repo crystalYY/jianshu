@@ -1,4 +1,8 @@
+# 简书项目总结
 
+标签（空格分隔）： 项目总结
+
+---
 ## 技术栈：
 react + react-redux + styled-components + axios + redux-thunk + react-router-dom + immutable
 
@@ -7,7 +11,7 @@ react + react-redux + styled-components + axios + redux-thunk + react-router-dom
   
 
      1. cd jianshu
-     2. git clone -b master https://github.com/crystalYY/jianshu.git
+     2. git clone https://github.com/crystalYY/jianshu.git
      3. npm start
      4. 项目将运行在 http://localhost:3000/
 
@@ -97,11 +101,11 @@ store中的数据只能store自己通过reducer返回的newState更新，别的�
 如果一个总的reducer过长则修改state的效率会变低，这个时候可以利用combineReducers来分类管理reducers
 ```
     export default combineReducers({
-		header: headerReducer,
-		home: homeReducer,
-		detail: detailStore,
-		login: LoginReducer
-	});
+    header: headerReducer,
+    home: homeReducer,
+    detail: detailStore,
+    login: LoginReducer
+  });
 ```
 需要先从redux中引入combineReducers,然后在一个 组件中再创建一个小的reducer，比如在header组件中创建headerReducer，创建方法和之前创建reducer一致，，先定义一个defaultState，然后导出一个纯函数
 ```
@@ -115,7 +119,7 @@ export default （state=defaultState, action）{
 ```
 import {fromJS} from 'immutable';
 const defaultState = fromJS({
-	login:false
+  login:false
 });
 ```
 
@@ -131,6 +135,7 @@ const defaultState = fromJS({
 ##### **Provider组件**
 Provider组件的作用是将Provider组件内的组件与store进行绑定
 ![https://i.niupic.com/images/2019/08/15/_1873.png][4]
+
 ##### **connect 方法**
 connect方法将组件与store相连接，并通过mapStateToProps(将state映射到当前组件的props)与mapDispatchToProps(将dispatch方法映射到props上）。
 ![https://i.niupic.com/images/2019/08/15/_1884.png][5]
@@ -138,9 +143,12 @@ connect方法将组件与store相连接，并通过mapStateToProps(将state映�
 ![此处输入图片的描述][6]
 mapDispatchToProps，接收一个dispatch参数，返回一个对象，对象里包含会dispatch(action)的方法。dispatch(action)后就可以通过reducer来修改state，返回给store新的state了。当前组件可以通过this.props.方法名来调用，并且无需bind(this)
 ![此处输入图片的描述][7]
+
+
 #### **深拷贝**
 reducer里面可以接收state，但不能直接改变state，需要通过深拷贝将原来的state拷贝一份，然后再将新的state返回。
 深拷贝的一种方法：运用JSON.stringify()将一个对象或数组转换为一个JSON字符串，然后再利用JSON.parse()解析JSON字符串，返回给定JSON文本的对象。它的返回值为object 
+
 ###  **中间件**
 ##### **redux-thunk(主要功能为让dispatch可以接收函数类型的action)**
 redux-thunk中间件就是一个函数，对store.dispatch方法进行了改造，在发出action和执行reducer之间，添加其他功能
@@ -148,6 +156,8 @@ redux-thunk中间件就是一个函数，对store.dispatch方法进行了改造�
 中间件里面的action函数再通过参数接收的dispatch将action传递给reducer，此时的action需要是一个对象**
 主要用于处理异步操作，如下图所示可以看到store.dispatch接收到函数类型的action后，自动发送出去，然后接着执行下面的console，而函数类型的action会在另一个线程上执行异步操作。
 ![此处输入图片的描述][9]
+
+
   [1]: https://i.niupic.com/images/2019/08/15/_1648.png
   [2]: https://i.niupic.com/images/2019/08/15/_1662.png
   [3]: https://i.niupic.com/images/2019/08/15/_1678.png
@@ -156,4 +166,4 @@ redux-thunk中间件就是一个函数，对store.dispatch方法进行了改造�
   [6]: https://i.niupic.com/images/2019/08/15/_1908.png
   [7]: https://i.niupic.com/images/2019/08/15/_1915.png
   [8]: https://i.niupic.com/images/2019/08/15/_1915.png
-  [9]: https://i.niupic.com/images/2019/08/15/_1712.pn
+  [9]: https://i.niupic.com/images/2019/08/15/_1712.png
