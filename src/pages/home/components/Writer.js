@@ -7,12 +7,10 @@ class Writer extends PureComponent {
 	
 	render() {
 		const {
-			isfocused,
 			writerList,
 			writerLength,
 			currentWriter,
-			changeWriterList,
-			handleFocus
+			changeWriterList
 		} = this.props;
 		return (
 			<WriterWrapper>

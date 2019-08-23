@@ -207,7 +207,7 @@ export const Additional = styled.div`
 	}
 `;
 
-export const Button = styled.a`
+export const Button = styled.span`
 	//p{
 		flex:1;
 		border: 1px solid #ea6f5a;

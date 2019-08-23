@@ -7,7 +7,9 @@ export const exitUserAction = () => ({
 
 export const handleLoginAction = (userName, password) => {
 	return (dispatch) => {
-		axios.get('/testData/login.json?userName=' + userName +'&password=' + password).then((res) => {
+		//在本地模拟需要配备模拟服务器，比如Charles
+		axios.post('/login.json',{userName: 'userName', password: 'password'}).then((res) => {
+			console.log(res);
 			const result = res.data.data;
 			if(result){
 				const action ={
@@ -19,7 +21,8 @@ export const handleLoginAction = (userName, password) => {
 				alert('登录失败！');
 			}
 			
-		}).catch(()=>{
+		}).catch((error)=>{
+			console.log(error);
 			alert('请刷新重试~');
 		})
 	}

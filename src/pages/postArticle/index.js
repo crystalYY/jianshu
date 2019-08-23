@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Link, Redirect} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 
 class PostArticle extends Component{
 	render() {
-		const {loginStatus,handleLogin} = this.props;
+		const {loginStatus} = this.props;
 		//如果登录显示写文章页面，未登录显示登录界面
 		if(loginStatus){
 			return (
