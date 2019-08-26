@@ -81,7 +81,7 @@ export const initWriterListAction = () =>{
 
 export const changeWriterListAction = (curPos, len) => {
 	return (dispatch) => {
-		axios.get('./testData/writerList.json').then((res)=>{
+		axios.get('/testData/writerList.json').then((res)=>{
 			const origindData = JSON.parse(JSON.stringify(res.data));
 			const data = [];
 			let currentPosition = curPos;
@@ -119,5 +119,27 @@ export const changeWriterListAction = (curPos, len) => {
 			
 		})
 	}
-}
+};
 
+export const handleFocusClickAction = (id,focusState) => {
+	return (dispatch) =>{
+		axios({
+			method: 'post',
+			url: '/testData/writerList.json',
+			data: {
+				id,
+				focusState
+			}
+		}).then((res)=>{
+			const data = res.data;
+			const action = {
+				type: actionTypes.HANDLE_FOCUS,
+				data: fromJS(data)
+			};
+			dispatch(action);
+			console.log(data);
+		}).catch((error)=>{
+			console.log(error);
+		})
+	}
+};

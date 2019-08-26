@@ -69,6 +69,8 @@ export default (state = defaultState, action) => {
 				writerItem: action.data,
 				writerItemPosition: action.currentPosition
 			});
+			case actionTypes.HANDLE_FOCUS:
+				return state.set('writerItem', action.data);
 		default:
 			return state;
 	}

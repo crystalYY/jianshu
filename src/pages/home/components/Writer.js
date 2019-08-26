@@ -10,7 +10,8 @@ class Writer extends PureComponent {
 			writerList,
 			writerLength,
 			currentWriter,
-			changeWriterList
+			changeWriterList,
+			handleFocusClick
 		} = this.props;
 		return (
 			<WriterWrapper>
@@ -26,7 +27,23 @@ class Writer extends PureComponent {
 							<WriterItem key={item.get('id')}>
 								<a href='/'><img className='writerImages' src={item.get('picUrl')} alt='writerImages' /></a>
 								<a href='/' className='writerName'>{item.get('writerName')}</a>
-								<span className='addFocus'><span className='iconfont'>&#xe644;</span>关注</span>
+								{
+									item.get('focusd') ?  
+										<span 
+											className='addFocus haveFocused' 
+											onClick = {()=>handleFocusClick(item.get('id'), !item.get('focusd'))}
+										>
+											已关注
+										</span> :
+										<span 
+											className='addFocus' 
+											onClick = {()=>handleFocusClick(item.get('id'), !item.get('focusd'))}
+										>
+											<span className='iconfont'>&#xe644;</span>
+											关注
+										</span>
+								}
+								
 								<p className = 'writerDetail'>{item.get('writerDetail')}</p>					
 							</WriterItem>
 						)
@@ -46,7 +63,7 @@ const mapStateToProps = (state) => {
 	return {
 		writerList: state.get('home').get('writerItem'),
 		writerLength: state.get('home').get('writerItemLength'),
-		currentWriter: state.get('home').get('writerItemPosition'),
+		currentWriter: state.get('home').get('writerItemPosition')
 	}
 }
 const mapDispatchToProps = (dispatch) => {
@@ -56,6 +73,9 @@ const mapDispatchToProps = (dispatch) => {
 		},
 		changeWriterList(cur, len) {
 			dispatch(createActions.changeWriterListAction(cur,len));
+		},
+		handleFocusClick(id, focusState) {
+			dispatch(createActions.handleFocusClickAction(id, focusState));
 		}
 	}
 }

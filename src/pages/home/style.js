@@ -309,6 +309,9 @@ export const WriterItem=styled.li`
 			color: #42c02e;
 			font-size:14px;
 		}
+		&.haveFocused{
+			color: #c0c0c0;
+		}
 	}
 	.writerDetail{
 		color: #969696;

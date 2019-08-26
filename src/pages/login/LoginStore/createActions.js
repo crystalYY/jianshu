@@ -9,7 +9,6 @@ export const handleLoginAction = (userName, password) => {
 	return (dispatch) => {
 		//在本地模拟需要配备模拟服务器，比如Charles
 		axios.post('/login.json',{userName: 'userName', password: 'password'}).then((res) => {
-			console.log(res);
 			const result = res.data.data;
 			if(result){
 				const action ={
